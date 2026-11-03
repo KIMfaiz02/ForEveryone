@@ -1,4 +1,4 @@
-# Perpustakaan SMP Yuppentek 2
+# Perpustakaan SMKN 5 Tangerang
 
 Aplikasi memakai PHP 8+, MySQL/MariaDB, PDO, dan JavaScript di browser. Akun, katalog, genre, sesi login, dan transaksi peminjaman disimpan di database, bukan `localStorage`.
 

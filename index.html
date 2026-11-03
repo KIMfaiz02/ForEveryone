@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perpustakaan SMP Yuppentek 2</title>
+    <meta name="theme-color" content="#0b2f6b">
+    <title>Perpustakaan SMKN 5 Tangerang</title>
     <link rel="stylesheet" href="stle.css">
 </head>
 <body>
     <header id="site-header">
         <div class="brand-group">
-            <a class="site-logo" href="index.html" aria-label="Beranda"><img src="logo.svg" alt="Logo SMP Yuppentek 2"></a>
-            <h1>Perpustakaan SMP Yuppentek 2</h1>
+            <a class="site-logo" href="index.html" aria-label="Beranda"><img src="logo-smkn5.jpg" alt="Logo SMKN 5 Tangerang"></a>
+            <h1>Perpustakaan<br><strong>SMKN 5 Tangerang</strong></h1>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="katalog.html">Katalog Buku</a></li>
                 <li><a href="pencarian.html">Pencarian</a></li>
-                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
                 <li id="nav-auth"><a href="login.html">Masuk / Daftar</a></li>
             </ul>
@@ -28,41 +29,44 @@
             <img class="home-hero-image" src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&amp;fit=crop&amp;w=2200&amp;q=85" alt="Rak-rak buku di ruang perpustakaan" fetchpriority="high">
             <div class="home-hero-shade"></div>
             <div class="home-hero-copy">
-                <p class="home-eyebrow">Selamat datang di</p>
-                <h2 id="home-title">Perpustakaan SMP Yuppentek 2</h2>
-                <p class="home-intro">Temukan buku favoritmu dan jelajahi koleksi bacaan untuk belajar, bertumbuh, dan menemukan ide baru.</p>
+                <p class="home-eyebrow">Selamat datang di perpustakaan</p>
+                <h2 id="home-title">Perpustakaan<br><span>SMKN 5 Tangerang</span></h2>
+                <p class="home-intro">Membaca adalah jendela dunia, dan perpustakaan adalah pintunya. Temukan inspirasi untuk belajar, berkarya, dan meraih masa depan.</p>
                 <form class="home-search" action="pencarian.html" method="get" role="search">
                     <label class="visually-hidden" for="home-search-input">Cari judul, penulis, atau kategori</label>
                     <input id="home-search-input" name="q" type="search" placeholder="Cari buku, judul, penulis, atau kategori..." autocomplete="off">
-                    <button class="btn-primary" type="submit" aria-label="Cari buku">&#128269;</button>
+                    <button class="btn-primary" type="submit">Cari Buku</button>
                 </form>
-                <a href="katalog.html" class="home-text-link">Jelajahi katalog <span aria-hidden="true">&#8599;</span></a>
+                <div class="hero-actions">
+                    <a href="katalog.html" class="home-text-link">Jelajahi katalog <span aria-hidden="true">&#8599;</span></a>
+                    <a href="tentang.html" class="home-text-link home-about-link">Kenali perpustakaan</a>
+                </div>
             </div>
-            <div class="home-hero-caption"><span>Ruang baca, ruang bertumbuh</span><span>01 / 03</span></div>
+            <div class="home-hero-caption"><span>Belajar hari ini, berkarya esok hari</span><span>SMKN 5 TANGERANG</span></div>
         </section>
 
         <section class="home-shortcuts" aria-labelledby="shortcut-title">
             <div class="home-section-heading">
-                <p class="home-eyebrow">Mulai dari sini</p>
-                <h2 id="shortcut-title">Apa yang ingin kamu temukan?</h2>
+                <p class="home-eyebrow">Jelajahi layanan</p>
+                <h2 id="shortcut-title">Temukan ruang untuk bertumbuh</h2>
             </div>
             <div class="shortcut-grid">
                 <a class="shortcut-link" href="katalog.html">
                     <span class="shortcut-number">01 / KOLEKSI</span>
-                    <h3>Jelajahi buku</h3>
-                    <p>Lihat pilihan buku dan temukan bacaan berikutnya.</p>
+                    <h3>Katalog buku</h3>
+                    <p>Jelajahi koleksi bacaan untuk mendukung pelajaran dan keahlianmu.</p>
                     <span class="shortcut-arrow" aria-hidden="true">&#8594;</span>
                 </a>
                 <a class="shortcut-link" href="pencarian.html">
                     <span class="shortcut-number">02 / PENCARIAN</span>
-                    <h3>Cari judul</h3>
-                    <p>Temukan buku berdasarkan judul, penulis, atau genre.</p>
+                    <h3>Temukan bacaan</h3>
+                    <p>Cari buku berdasarkan judul, penulis, atau kategori dengan mudah.</p>
                     <span class="shortcut-arrow" aria-hidden="true">&#8594;</span>
                 </a>
-                <a class="shortcut-link" href="profile.html">
-                    <span class="shortcut-number">03 / AKUN</span>
-                    <h3>Cek peminjaman</h3>
-                    <p>Lihat profil dan riwayat buku yang kamu pinjam.</p>
+                <a class="shortcut-link" href="tentang.html">
+                    <span class="shortcut-number">03 / VISI &amp; MISI</span>
+                    <h3>Tentang kami</h3>
+                    <p>Kenali visi dan misi perpustakaan dalam membangun budaya literasi.</p>
                     <span class="shortcut-arrow" aria-hidden="true">&#8594;</span>
                 </a>
             </div>
@@ -70,15 +74,15 @@
 
         <section class="home-news" aria-labelledby="news-title">
             <div>
-                <p class="home-eyebrow">Kabar perpustakaan</p>
-                <h2 id="news-title">Ada bacaan baru untuk dijelajahi.</h2>
+                <p class="home-eyebrow">Literasi untuk masa depan</p>
+                <h2 id="news-title">Baca, belajar, dan ciptakan peluang.</h2>
             </div>
-            <p>Koleksi buku sains terbaru sudah tersedia. Buka katalog dan temukan topik yang menarik perhatianmu.</p>
-            <a class="home-news-link" href="katalog.html">Lihat koleksi sains <span aria-hidden="true">&#8594;</span></a>
+            <p>Perpustakaan SMKN 5 Tangerang mendukung proses belajar dan pengembangan kompetensi melalui akses bacaan dan informasi.</p>
+            <a class="home-news-link" href="tentang.html">Lihat visi &amp; misi <span aria-hidden="true">&#8594;</span></a>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Perpustakaan Sekolah SMP Yuppentek 2. Semua hak dilindungi.</p>
+        <p>&copy; 2026 Perpustakaan SMKN 5 Tangerang. Semua hak dilindungi.</p>
     </footer>
     <script src="script.js"></script>
 </body>

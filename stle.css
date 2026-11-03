@@ -803,7 +803,7 @@ footer{
     min-height:310px;
     place-items:center;
     overflow:hidden;
-    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGwIKojg8fXm7W-aJq2Dowg_ZtnbuA-usxydR4BthKeiUtgoAFSr6Ym9o&s=10") center 47%/cover;
+    background:url("https://smkn5tangerangkota.sch.id/uploads/article/sekolah_smkn5tng_vQ1RDtiwEf.jpg") center 50%/cover;
     color:#fff;
     text-align:center;
 }
@@ -894,4 +894,219 @@ footer{
     .search-results-heading{ flex-direction:column }
     .sort-control{ flex-direction:row; align-items:center }
     .profile-sidebar nav{ grid-template-columns:1fr }
+}
+
+/* SMKN 5 Tangerang visual identity */
+:root{
+    --bg:#f3f7ff;
+    --card:#ffffff;
+    --accent:#1457c5;
+    --accent-2:#3686ff;
+    --success:#20a66a;
+    --muted:#64748b;
+}
+body{ color:#142b4b; background:#f3f7ff }
+header#site-header{
+    position:relative;
+    z-index:2;
+    padding:.75rem clamp(1rem,4vw,3.5rem);
+    background:#0b2f6b;
+    box-shadow:0 6px 22px rgba(11,47,107,.17);
+}
+.brand-group{ gap:.7rem }
+.site-logo{
+    flex-basis:56px;
+    width:56px;
+    height:56px;
+    border-radius:0;
+}
+.site-logo img{ object-fit:contain }
+header h1{ font-size:.9rem; line-height:1.25; letter-spacing:.01em }
+header h1 strong{ color:#a9d2ff; font-size:.95rem }
+nav ul{ gap:.3rem }
+nav a{ padding:.55rem .72rem; border-radius:999px; font-size:.88rem }
+nav a:hover, nav a.active{ background:rgba(255,255,255,.14) }
+#nav-auth a{ padding-inline:1rem; background:#1769e8; color:#fff; font-weight:700 }
+#nav-auth a:hover{ background:#3283ff }
+
+.home-main{ padding:1.1rem clamp(.8rem,2.4vw,2rem) 3rem }
+.home-hero{
+    min-height:clamp(470px,67svh,610px);
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:18px;
+    background:#092960;
+    box-shadow:0 18px 48px rgba(17,58,118,.2);
+}
+.home-hero-image{ object-position:center 48% }
+.home-hero-shade{
+    background:
+        linear-gradient(90deg,rgba(5,27,73,.96) 0%,rgba(6,43,105,.88) 43%,rgba(10,61,144,.42) 75%,rgba(8,41,98,.12) 100%),
+        linear-gradient(0deg,rgba(7,34,88,.35),transparent 45%);
+}
+.home-hero-copy{ width:min(760px,77%); padding:4rem clamp(1.5rem,6vw,6rem) }
+.home-eyebrow{ color:#8cc9ff; letter-spacing:.12em }
+.home-hero-copy h2{
+    max-width:670px;
+    font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+    font-size:clamp(2.6rem,4.8vw,4rem);
+    font-weight:800;
+    letter-spacing:-.045em;
+    line-height:1.02;
+}
+.home-hero-copy h2 span{ color:#53aaff; white-space:nowrap }
+.home-intro{ max-width:510px; margin-top:1rem; font-size:1rem; color:#e4efff }
+.home-search{
+    display:flex;
+    width:min(510px,100%);
+    gap:.4rem;
+    margin-top:1.5rem;
+    padding:.35rem;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:999px;
+    background:#fff;
+    box-shadow:0 10px 24px rgba(0,0,0,.15);
+}
+.home-search input{ min-width:0; flex:1; padding:.7rem 1rem; border:0; outline:0; background:transparent; color:#142b4b; font:inherit }
+.home-search .btn-primary{
+    min-width:100px;
+    border-radius:999px;
+    background:#1769e8;
+    color:#fff;
+}
+.home-search .btn-primary:hover{ background:#3283ff }
+.hero-actions{ gap:1.4rem; margin-top:1.2rem }
+.home-text-link{ font-size:.9rem }
+.home-about-link{ color:#d5e8ff; font-weight:500 }
+.home-hero-caption{
+    right:2rem;
+    bottom:1.5rem;
+    left:2rem;
+    color:#dceaff;
+    font-size:.7rem;
+    letter-spacing:.11em;
+}
+.home-shortcuts{ max-width:1240px; padding:3.5rem 0 3rem }
+.home-section-heading{ margin-bottom:1.25rem }
+.home-section-heading h2{
+    font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+    color:#142b4b;
+    font-size:clamp(1.55rem,3vw,2rem);
+    font-weight:750;
+    letter-spacing:-.025em;
+}
+.shortcut-grid{ gap:1rem; border:0 }
+.shortcut-link, .shortcut-link + .shortcut-link{
+    min-height:190px;
+    padding:1.35rem;
+    border:1px solid #e0eaf7;
+    border-radius:13px;
+    background:#fff;
+    box-shadow:0 7px 20px rgba(20,66,132,.06);
+    transition:transform .2s ease, box-shadow .2s ease;
+}
+.shortcut-link:hover{ transform:translateY(-4px); box-shadow:0 13px 28px rgba(20,66,132,.12) }
+.shortcut-number{ color:#1769e8; letter-spacing:.06em }
+.shortcut-link h3{
+    margin:.85rem 0 .4rem;
+    color:#142b4b;
+    font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+    font-size:1.25rem;
+    font-weight:700;
+}
+.shortcut-link p{ font-size:.9rem }
+.shortcut-arrow{ right:1.25rem; bottom:1rem; color:#1769e8 }
+.home-news{
+    grid-template-columns:1fr 1.15fr auto;
+    gap:1.5rem;
+    border-radius:14px;
+    background:linear-gradient(115deg,#0b2f6b,#1457c5);
+    box-shadow:0 12px 30px rgba(11,47,107,.15);
+}
+.home-news .home-eyebrow{ color:#8cc9ff }
+.home-news h2{
+    font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+    font-size:1.35rem;
+    font-weight:750;
+}
+.home-news-link{ color:#b5dcff }
+
+.about-page{ padding:0 !important }
+.about-hero{
+    min-height:340px;
+    background:
+        linear-gradient(90deg,rgba(5,29,79,.9),rgba(7,53,128,.66)),
+        url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1800&q=85") center 48%/cover;
+}
+.about-hero-shade{ background:linear-gradient(90deg,rgba(5,27,73,.4),rgba(5,27,73,.08)) }
+.about-hero-copy{ width:min(850px,100%); padding:3rem 1.2rem }
+.about-hero .eyebrow{ color:#9bd0ff }
+.about-hero h2{
+    font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+    font-size:clamp(2rem,4vw,3.2rem);
+    font-weight:800;
+}
+.about-hero-copy > p:last-child{ font-size:1rem }
+.about-values{
+    width:min(1200px,100%);
+    margin:0 auto;
+    padding:2rem 1.2rem 2.5rem;
+    grid-template-columns:1fr 1.4fr 1fr;
+    gap:1rem;
+}
+.about-values article, .about-values article + article{
+    padding:1.35rem;
+    border:1px solid #e0eaf7;
+    border-radius:13px;
+    background:#fff;
+    box-shadow:0 8px 24px rgba(20,66,132,.06);
+}
+.about-values h3{ margin:.85rem 0 .55rem; color:#142b4b; font-size:1.15rem }
+.about-values p, .about-values li{ color:#536981; font-size:.9rem; line-height:1.65 }
+.about-values ul{ margin:.45rem 0 0; padding-left:1.15rem }
+.about-values li + li{ margin-top:.5rem }
+.about-footer{ margin-top:0; background:#09275a }
+footer:not(.about-footer){ background:#09275a; color:#d0deec }
+
+@media (max-width:900px){
+    .home-hero-copy{ width:85% }
+    .about-values{ grid-template-columns:1fr 1.25fr }
+    .about-values article:last-child{ grid-column:1/-1 }
+}
+@media (max-width:640px){
+    header#site-header{ justify-content:center; padding:.7rem .75rem }
+    .brand-group{ margin-right:auto }
+    .site-logo{ flex-basis:52px; width:52px; height:52px }
+    header h1{ font-size:.78rem }
+    header h1 strong{ font-size:.83rem }
+    nav{ width:100% }
+    nav ul{ justify-content:center; gap:.15rem }
+    nav a{ padding:.42rem .5rem; font-size:.78rem }
+    #nav-auth{ margin-left:0 }
+    #nav-auth a{ padding-inline:.7rem }
+    .home-main{ padding:.65rem .65rem 2rem }
+    .home-hero{ min-height:540px; border-radius:13px }
+    .home-hero-image{ object-position:60% center }
+    .home-hero-shade{ background:linear-gradient(90deg,rgba(5,27,73,.93),rgba(6,43,105,.77) 72%,rgba(8,41,98,.48)) }
+    .home-hero-copy{ width:100%; padding:2.7rem 1.15rem 4rem }
+    .home-hero-copy h2{ font-size:clamp(2.2rem,10vw,3.3rem) }
+    .home-hero-copy h2 span{ white-space:normal }
+    .home-intro{ font-size:.92rem }
+    .home-search{ margin-top:1.2rem }
+    .home-search input{ padding:.65rem .7rem; font-size:.83rem }
+    .home-search .btn-primary{ min-width:82px; padding:.55rem .65rem; font-size:.82rem }
+    .home-hero-caption{ right:1rem; bottom:1rem; left:1rem; font-size:.58rem }
+    .hero-actions{ align-items:flex-start; flex-direction:column; gap:.75rem }
+    .home-shortcuts{ padding:2.5rem 0 2rem }
+    .shortcut-grid{ grid-template-columns:1fr; gap:.7rem }
+    .shortcut-link, .shortcut-link + .shortcut-link{ min-height:0; padding:1.1rem }
+    .home-news{ grid-template-columns:1fr; gap:.8rem; padding:1.3rem }
+    .home-news-link{ white-space:normal }
+    .about-hero{ min-height:280px }
+    .about-hero-copy{ padding:2rem 1rem }
+    .about-values{ grid-template-columns:1fr; padding:1rem }
+    .about-values article:last-child{ grid-column:auto }
+}
+@media (prefers-reduced-motion:reduce){
+    .shortcut-link{ transition:none }
+    .shortcut-link:hover{ transform:none }
 }
