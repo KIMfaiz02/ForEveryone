@@ -50,16 +50,10 @@
                 <input type="email" id="email" required>
 
                 <label for="password">Kata Sandi</label>
-                <input type="password" id="password" required>
+                <input type="password" id="password" minlength="8" required>
 
                 <label for="password2">Konfirmasi Kata Sandi</label>
                 <input type="password" id="password2" required>
-
-                <details class="admin-code-details">
-                    <summary>Daftar sebagai admin</summary>
-                    <label for="admincode">Kode Admin</label>
-                    <input id="admincode" placeholder="Masukkan kode admin">
-                </details>
 
                 <button type="submit" class="btn-primary">Daftar</button>
                 </form>
@@ -71,7 +65,7 @@
     <div id="toast" class="toast" aria-live="polite"></div>
     <script src="script.js"></script>
     <script>
-        document.getElementById('register-form').addEventListener('submit', function(e){
+        document.getElementById('register-form').addEventListener('submit', async function(e){
             e.preventDefault();
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -79,20 +73,16 @@
             const password2 = document.getElementById('password2').value;
             const nis = document.getElementById('nis').value.trim();
             const className = document.getElementById('class-name').value;
-            const admincode = document.getElementById('admincode').value.trim();
-
             if(password !== password2) {
                 showToast('Kata sandi tidak cocok', true);
                 return;
             }
-
-            const role = (admincode === 'ADMINKODE') ? 'admin' : 'user';
-            const ok = registerUser({name, email, password, role, nis, className});
-            if(ok) {
+            try {
+                await registerUser({name, email, password, nis, className});
                 showToast('Pendaftaran berhasil. Silakan masuk.');
                 setTimeout(()=> { window.location = 'login.html'; }, 900);
-            } else {
-                showToast('Email sudah terdaftar', true);
+            } catch(error) {
+                showToast(error.message, true);
             }
         });
     </script>

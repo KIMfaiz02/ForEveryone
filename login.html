@@ -45,7 +45,7 @@
                 <button type="submit" class="btn-primary">Masuk</button>
                 </form>
                 <p class="muted auth-switch">Belum punya akun? <a href="register.html">Daftar di sini</a></p>
-                <p class="muted small">Demo admin: <code>admin@admin.com</code> / <code>admin123</code></p>
+                <p class="muted small">Admin dibuat oleh pengelola server.</p>
             </section>
         </div>
     </main>
@@ -53,16 +53,16 @@
     <div id="toast" class="toast" aria-live="polite"></div>
     <script src="script.js"></script>
     <script>
-        document.getElementById('login-form').addEventListener('submit', function(e){
+        document.getElementById('login-form').addEventListener('submit', async function(e){
             e.preventDefault();
             const email = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value;
-            const ok = loginUser(email, password);
-            if(ok) {
+            try {
+                await loginUser(email, password);
                 showToast('Berhasil masuk. Mengarahkan...');
                 setTimeout(()=> { window.location = 'index.html'; }, 900);
-            } else {
-                showToast('Email atau kata sandi salah', true);
+            } catch(error) {
+                showToast(error.message, true);
             }
         });
     </script>
