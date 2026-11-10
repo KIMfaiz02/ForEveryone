@@ -57,9 +57,39 @@ async function refreshData() {
     populateGenreSelects();
     renderGenresAdmin();
     renderBooks();
+    renderHomeDashboard();
     cariBuku();
     await renderProfile();
     await renderAdminDashboard();
+}
+
+function renderHomeDashboard() {
+    const list = document.getElementById('home-book-list');
+    const stats = {
+        'home-book-count': books.length,
+        'home-copy-count': books.reduce((total, book) => total + Number(book.stock), 0),
+        'home-available-count': books.reduce((total, book) => total + Number(book.available), 0),
+        'home-loaned-count': books.reduce((total, book) => total + Number(book.stock) - Number(book.available), 0)
+    };
+
+    Object.entries(stats).forEach(([id, value]) => {
+        const element = document.getElementById(id);
+        if (element) element.textContent = new Intl.NumberFormat('id-ID').format(value);
+    });
+
+    if (!list) return;
+    if (!books.length) {
+        list.innerHTML = '<p class="empty-state">Belum ada buku di katalog. Silakan kembali lagi nanti.</p>';
+        return;
+    }
+
+    list.innerHTML = books.slice(0, 5).map(book => `
+        <a class="home-book-card" href="katalog.html" aria-label="Lihat ${escapeHtml(book.title)} di katalog">
+            <img src="${escapeHtml(book.img || DEFAULT_IMAGE)}" alt="Sampul ${escapeHtml(book.title)}">
+            <strong>${escapeHtml(book.title)}</strong>
+            <span>${escapeHtml(book.author)}</span>
+            <small class="${Number(book.available) > 0 ? 'is-available' : 'is-borrowed'}">${Number(book.available) > 0 ? 'Tersedia' : 'Sedang dipinjam'}</small>
+        </a>`).join('');
 }
 
 async function loginUser(email, password) {

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Admin - Perpustakaan SMKN 5 Tangerang</title>
+    <title>Dashboard Admin - Libraryss</title>
     <link rel="stylesheet" href="stle.css">
 </head>
 <body>
     <header id="site-header">
         <div class="brand-group">
-            <a class="site-logo" href="index.html" aria-label="Beranda"><img src="logo-smkn5.jpg" alt="Logo SMKN 5 Tangerang"></a>
+            <a class="site-logo" href="index.html" aria-label="Libraryss - Beranda"><img src="logo-libraryss.svg" alt="Logo Libraryss"></a>
             <h1>Panel Admin</h1>
         </div>
         <nav>
@@ -31,74 +31,90 @@
             <a class="btn-primary" href="login.html">Masuk</a>
         </section>
         <div id="admin-workspace" hidden>
-            <div class="page-heading">
-                <p class="eyebrow">Ringkasan perpustakaan</p>
-                <h2>Dashboard &amp; Laporan</h2>
-                <p>Pantau anggota, koleksi, dan status transaksi peminjaman.</p>
+            <div class="admin-dashboard-layout">
+                <aside class="admin-sidebar">
+                    <a class="admin-sidebar-brand" href="index.html">
+                        <img src="logo-libraryss.svg" alt="">
+                        <span>Libraryss<small>ADMINISTRATOR</small></span>
+                    </a>
+                    <nav aria-label="Navigasi dashboard admin">
+                        <a class="admin-menu-link active" href="#admin-workspace">Dashboard</a>
+                        <a class="admin-menu-link" href="katalog.html">Data Buku</a>
+                        <a class="admin-menu-link" href="#user-management-title">Data Anggota</a>
+                        <a class="admin-menu-link" href="#report-title">Data Peminjaman</a>
+                    </nav>
+                </aside>
+                <div class="admin-dashboard-content">
+                    <div class="page-heading">
+                        <p class="eyebrow">Ringkasan perpustakaan</p>
+                        <h2>Dashboard Admin</h2>
+                        <p>Pantau anggota, koleksi, dan status transaksi peminjaman.</p>
+                    </div>
+                    <section id="admin-stats" class="admin-stats" aria-label="Statistik perpustakaan"></section>
+                    <section class="report-section user-management" aria-labelledby="user-management-title">
+                        <div class="section-heading">
+                            <div>
+                                <p class="eyebrow">Data anggota</p>
+                                <h2 id="user-management-title">Akun Pengguna</h2>
+                                <p class="section-description">Lihat akun yang telah terdaftar dan bantu pengguna mengatur ulang password.</p>
+                            </div>
+                        </div>
+                        <div class="account-security-note" role="note">
+                            Password tidak ditampilkan demi keamanan. Admin dapat membantu dengan menetapkan password baru.
+                        </div>
+                        <div class="report-table-wrap">
+                            <table class="report-table account-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>NIS</th>
+                                        <th>Kelas</th>
+                                        <th>Tanggal daftar</th>
+                                        <th>Password</th>
+                                        <th>Tindakan</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="user-account-body"></tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="report-section" aria-labelledby="report-title">
+                        <div class="section-heading">
+                            <div>
+                                <p class="eyebrow">Catatan transaksi</p>
+                                <h2 id="report-title">Laporan Peminjaman &amp; Pengembalian</h2>
+                            </div>
+                            <label class="report-filter-label" for="report-filter">Status transaksi
+                                <select id="report-filter">
+                                    <option value="all">Semua status</option>
+                                    <option value="active">Sedang dipinjam</option>
+                                    <option value="returned">Dikembalikan</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="report-table-wrap">
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Buku</th>
+                                        <th>Anggota</th>
+                                        <th>Tanggal pinjam</th>
+                                        <th>Tenggat</th>
+                                        <th>Tanggal kembali</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="loan-report-body"></tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <section id="admin-stats" class="admin-stats" aria-label="Statistik perpustakaan"></section>
-            <section class="report-section user-management" aria-labelledby="user-management-title">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">Data anggota</p>
-                        <h2 id="user-management-title">Akun Pengguna</h2>
-                        <p class="section-description">Lihat akun yang telah terdaftar dan bantu pengguna mengatur ulang password.</p>
-                    </div>
-                </div>
-                <div class="account-security-note" role="note">
-                    Password tidak ditampilkan demi keamanan. Admin dapat membantu dengan menetapkan password baru.
-                </div>
-                <div class="report-table-wrap">
-                    <table class="report-table account-table">
-                        <thead>
-                            <tr>
-                                <th>Nama</th>
-                                <th>Email</th>
-                                <th>NIS</th>
-                                <th>Kelas</th>
-                                <th>Tanggal daftar</th>
-                                <th>Password</th>
-                                <th>Tindakan</th>
-                            </tr>
-                        </thead>
-                        <tbody id="user-account-body"></tbody>
-                    </table>
-                </div>
-            </section>
-            <section class="report-section" aria-labelledby="report-title">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">Catatan transaksi</p>
-                        <h2 id="report-title">Laporan Peminjaman &amp; Pengembalian</h2>
-                    </div>
-                    <label class="report-filter-label" for="report-filter">Status transaksi
-                        <select id="report-filter">
-                            <option value="all">Semua status</option>
-                            <option value="active">Sedang dipinjam</option>
-                            <option value="returned">Dikembalikan</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="report-table-wrap">
-                    <table class="report-table">
-                        <thead>
-                            <tr>
-                                <th>Buku</th>
-                                <th>Anggota</th>
-                                <th>Tanggal pinjam</th>
-                                <th>Tenggat</th>
-                                <th>Tanggal kembali</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody id="loan-report-body"></tbody>
-                    </table>
-                </div>
-            </section>
         </div>
     </main>
     <footer>
-        <p>&copy; 2026 Perpustakaan SMKN 5 Tangerang. Semua hak dilindungi.</p>
+        <p>&copy; 2026 Libraryss · Perpustakaan SMKN 5 Tangerang. Semua hak dilindungi.</p>
     </footer>
     <script src="script.js"></script>
 </body>
