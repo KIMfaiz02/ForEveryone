@@ -1,4 +1,4 @@
-# Libraryss - Perpustakaan SMKN 5 Tangerang
+# Library
 
 Aplikasi memakai PHP 8+, MySQL/MariaDB, PDO, dan JavaScript di browser. Akun, katalog, genre, sesi login, dan transaksi peminjaman disimpan di database, bukan `localStorage`.
 
